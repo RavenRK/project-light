@@ -1,9 +1,12 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 public class Movement_Player : MonoBehaviour
 {
     [Header("Player settings")]
-    public float moveSpeed = 5f;
+    private float moveSpeed = 6;
+    public float RunSpeed = 12f;
+    public float WalkSpeed = 6f;
     public Transform playerCamera;
     private Vector2 moveInput;
 
@@ -33,5 +36,12 @@ public class Movement_Player : MonoBehaviour
     {
         // Get the input value from the contextand store in moveInput
         moveInput = context.ReadValue<Vector2>();
+    }
+    public void OnRun(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+            moveSpeed = RunSpeed;                                                                      // Increase the move speed when running
+        else if (context.canceled)
+            moveSpeed = WalkSpeed;                                                                       // Reset the move speed when not running
     }
 }
