@@ -4,16 +4,27 @@ using UnityEngine.InputSystem;
 public class Movement_Player : MonoBehaviour
 {
     [Header("Player settings")]
-    private float moveSpeed = 6;
     public float RunSpeed = 12f;
     public float WalkSpeed = 6f;
     public Transform playerCamera;
+    public float jumpForce = 5f;                                                                    // Jump force for the player
+    public float gravity = -9.81f;                                                                  // Gravity force for the player
+    
+    private float moveSpeed = 6;
     private Vector2 moveInput;
-
     private Rigidbody rb;
+
+    bool isGrounded = true;                                                                          // Check if the player is on the ground
+
+    [Header("Ground Check Settings")]
+    public float groundCheckDis = 1.1f;
+    public LayerMask groundLayer;                                                                   // layer mask for the ground
+    public Transform groundCheckOrigin;                                                             // groudn start point
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        
     }
     void FixedUpdate()
     {
@@ -31,6 +42,7 @@ public class Movement_Player : MonoBehaviour
         Vector3 moveVelocity = moveDirection * moveSpeed;
 
         rb.linearVelocity = new Vector3(moveVelocity.x, rb.linearVelocity.y, moveVelocity.z);        // Apply the movement velocity to the rigidbody ( physics base movement)
+        rb.AddForce(Vector3.up * gravity, ForceMode.Acceleration);                                   // Apply gravity to the rigidbody
     }
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -42,6 +54,16 @@ public class Movement_Player : MonoBehaviour
         if (context.performed)
             moveSpeed = RunSpeed;                                                                      // Increase the move speed when running
         else if (context.canceled)
-            moveSpeed = WalkSpeed;                                                                       // Reset the move speed when not running
+            moveSpeed = WalkSpeed;                                                                     // Reset the move speed when not running
+    }
+    public void OnJump(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            isGrounded = Physics.Raycast(groundCheckOrigin.position, Vector3.down, groundCheckDis, groundLayer); // Check if the player is on the ground using a raycast
+            if (isGrounded)                                                                           // Check if the player is on the ground
+                rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);                              // Apply the jump force to the rigidbody
+
+        }
     }
 }

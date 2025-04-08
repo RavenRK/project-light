@@ -375,6 +375,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 40dca5f4-c402-4dba-8c09-fd800ab960e9
     m_ActionName: 'Player/Run[/Keyboard/shift]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 320830260}
+        m_TargetAssemblyTypeName: Movement_Player, Assembly-CSharp
+        m_MethodName: OnJump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 54458d67-13b6-432d-9288-ec61b7caf6f5
+    m_ActionName: 'Player/Jump[/Keyboard/space]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -395,6 +411,13 @@ MonoBehaviour:
   RunSpeed: 7.5
   WalkSpeed: 4
   playerCamera: {fileID: 330585546}
+  jumpForce: 15
+  gravity: -45
+  groundCheckDis: 3
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  groundCheckOrigin: {fileID: 320830265}
 --- !u!54 &320830261
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -507,7 +530,7 @@ Transform:
   m_GameObject: {fileID: 320830258}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: -1.104}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -771,7 +794,7 @@ GameObject:
   - component: {fileID: 776003979}
   - component: {fileID: 776003978}
   - component: {fileID: 776003977}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1102,8 +1125,8 @@ Light:
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 2.25
-  m_Range: 12.4
+  m_Intensity: 8.52
+  m_Range: 43.59
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
