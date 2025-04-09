@@ -7,7 +7,7 @@ public class Look_player : MonoBehaviour
 
     public float mouseSensitivity = 100f;
     private Vector2 lookInput;
-    private float xRotation = 0f;
+    private float xRotation = 0f;                                          // Rotation around the x-axis ( player )
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;                           // Lock the cursor to the center of the screen

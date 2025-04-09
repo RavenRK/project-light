@@ -6,17 +6,16 @@ public class Movement_Player : MonoBehaviour
     [Header("Player settings")]
     public float RunSpeed = 12f;
     public float WalkSpeed = 6f;
-    public Transform playerCamera;
     public float jumpForce = 5f;                                                                    // Jump force for the player
     public float gravity = -9.81f;                                                                  // Gravity force for the player
     
     private float moveSpeed = 6;
     private Vector2 moveInput;
     private Rigidbody rb;
-
-    bool isGrounded = true;                                                                          // Check if the player is on the ground
+    public Transform playerCamera;
 
     [Header("Ground Check Settings")]
+    bool isGrounded = true;                                                                          // Check if the player is on the ground
     public float groundCheckDis = 1.1f;
     public LayerMask groundLayer;                                                                   // layer mask for the ground
     public Transform groundCheckOrigin;                                                             // groudn start point
@@ -24,7 +23,6 @@ public class Movement_Player : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        
     }
     void FixedUpdate()
     {
@@ -46,8 +44,7 @@ public class Movement_Player : MonoBehaviour
     }
     public void OnMove(InputAction.CallbackContext context)
     {
-        // Get the input value from the contextand store in moveInput
-        moveInput = context.ReadValue<Vector2>();
+            moveInput = context.ReadValue<Vector2>();                                               // Get the input value from the input system
     }
     public void OnRun(InputAction.CallbackContext context)
     {
