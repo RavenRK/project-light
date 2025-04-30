@@ -4,7 +4,7 @@ public class LightProJ : MonoBehaviour
 {
     private Transform returnLocation;   // The location to return to
     private bool isRecalling = false;   // Check if the projectile is recalling
-    public float recallSpeed = 10f;     // Speed of the recall
+    public float recallSpeed = 5;     // Speed of the recall
 
     private int bounceCount = 0;         // Count the number of bounces
     private int maxBounces = 3;            // Maximum number of bounces

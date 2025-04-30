@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Look_player : MonoBehaviour
+public class lookPlayer : MonoBehaviour
 {
     public Transform playerBody;
 

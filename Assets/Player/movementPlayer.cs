@@ -1,7 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
-public class Movement_Player : MonoBehaviour
+public class movementPlayer : MonoBehaviour
 {
     [Header("Player settings")]
     public float RunSpeed = 12f;
