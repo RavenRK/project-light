@@ -130,7 +130,6 @@ GameObject:
   - component: {fileID: 122593861}
   - component: {fileID: 122593860}
   - component: {fileID: 122593859}
-  - component: {fileID: 122593863}
   m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
@@ -227,18 +226,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &122593863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 122593858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9322d4865719647449ab0c2ca71fa563, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &320830258
 GameObject:
   m_ObjectHideFlags: 0
@@ -994,41 +981,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -5473262276481818981, guid: a5f166e4dc21a514db4d82d25651f010, type: 3}
-      propertyPath: recallSpeed
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: -5473262276481818981, guid: a5f166e4dc21a514db4d82d25651f010, type: 3}
-      propertyPath: nonBouncyMaterial
-      value: 
-      objectReference: {fileID: 13400000, guid: 40a6461bb34ab7b41ba718260663a381, type: 2}
-    - target: {fileID: -2808837987466185295, guid: a5f166e4dc21a514db4d82d25651f010, type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -2808837987466185295, guid: a5f166e4dc21a514db4d82d25651f010, type: 3}
-      propertyPath: m_Interpolate
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -2808837987466185295, guid: a5f166e4dc21a514db4d82d25651f010, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 661553196255813330, guid: a5f166e4dc21a514db4d82d25651f010, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 13400000, guid: 9eafb2ac48689a145b6e815c4694bfd1, type: 2}
     - target: {fileID: 1983658673532942143, guid: a5f166e4dc21a514db4d82d25651f010, type: 3}
       propertyPath: m_Name
       value: TrueLight_ProJ
       objectReference: {fileID: 0}
     - target: {fileID: 5301488088500815399, guid: a5f166e4dc21a514db4d82d25651f010, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.514
+      value: -3.412
       objectReference: {fileID: 0}
     - target: {fileID: 5301488088500815399, guid: a5f166e4dc21a514db4d82d25651f010, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.617
+      value: 2.784
       objectReference: {fileID: 0}
     - target: {fileID: 5301488088500815399, guid: a5f166e4dc21a514db4d82d25651f010, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1126,7 +1089,6 @@ GameObject:
   - component: {fileID: 1855140783}
   - component: {fileID: 1855140782}
   - component: {fileID: 1855140781}
-  - component: {fileID: 1855140780}
   m_Layer: 6
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -1134,18 +1096,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1855140780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1855140779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9322d4865719647449ab0c2ca71fa563, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &1855140781
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1247,7 +1197,6 @@ GameObject:
   - component: {fileID: 2007729039}
   - component: {fileID: 2007729038}
   - component: {fileID: 2007729037}
-  - component: {fileID: 2007729036}
   m_Layer: 6
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -1255,18 +1204,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2007729036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2007729035}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9322d4865719647449ab0c2ca71fa563, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &2007729037
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1373,6 +1310,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 330585546}
     - target: {fileID: 2649798602117654370, guid: c602a19aadbec004eaf670ddf970be4e, type: 3}
+      propertyPath: orbitSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649798602117654370, guid: c602a19aadbec004eaf670ddf970be4e, type: 3}
       propertyPath: pointLight
       value: 
       objectReference: {fileID: 819660107}
@@ -1390,7 +1331,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2649798602117654370, guid: c602a19aadbec004eaf670ddf970be4e, type: 3}
       propertyPath: projectileForce
-      value: 20
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030592924803471479, guid: c602a19aadbec004eaf670ddf970be4e, type: 3}
+      propertyPath: m_Range
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 5301488088500815399, guid: c602a19aadbec004eaf670ddf970be4e, type: 3}
       propertyPath: m_LocalPosition.x
