@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3540782600952325828
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2628062364261817950, guid: e478ec3fed8943548b4c21de6d5c8e0e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2628062364261817950, guid: e478ec3fed8943548b4c21de6d5c8e0e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2628062364261817950, guid: e478ec3fed8943548b4c21de6d5c8e0e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.25120783
+      objectReference: {fileID: 0}
+    - target: {fileID: 2628062364261817950, guid: e478ec3fed8943548b4c21de6d5c8e0e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.11000013
+      objectReference: {fileID: 0}
+    - target: {fileID: 2628062364261817950, guid: e478ec3fed8943548b4c21de6d5c8e0e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 11.500048
+      objectReference: {fileID: 0}
+    - target: {fileID: 2628062364261817950, guid: e478ec3fed8943548b4c21de6d5c8e0e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2628062364261817950, guid: e478ec3fed8943548b4c21de6d5c8e0e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2628062364261817950, guid: e478ec3fed8943548b4c21de6d5c8e0e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2628062364261817950, guid: e478ec3fed8943548b4c21de6d5c8e0e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2628062364261817950, guid: e478ec3fed8943548b4c21de6d5c8e0e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2628062364261817950, guid: e478ec3fed8943548b4c21de6d5c8e0e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2628062364261817950, guid: e478ec3fed8943548b4c21de6d5c8e0e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6818315015293935799, guid: e478ec3fed8943548b4c21de6d5c8e0e, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 6948337206202080401, guid: e478ec3fed8943548b4c21de6d5c8e0e, type: 3}
+      propertyPath: m_Name
+      value: MoveObject Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 413133199450015068, guid: e478ec3fed8943548b4c21de6d5c8e0e, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6948337206202080401, guid: e478ec3fed8943548b4c21de6d5c8e0e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5341284310102908045}
+  m_SourcePrefab: {fileID: 100100000, guid: e478ec3fed8943548b4c21de6d5c8e0e, type: 3}
+--- !u!1 &5858638736961288789 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6948337206202080401, guid: e478ec3fed8943548b4c21de6d5c8e0e, type: 3}
+  m_PrefabInstance: {fileID: 3540782600952325828}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5341284310102908045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5858638736961288789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33ad0f24c50ad7d4fa32b1402a3b6adb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPowered: 0
+  moveOffset: {x: 0, y: 0, z: 0}
+  moveSpeed: 2
