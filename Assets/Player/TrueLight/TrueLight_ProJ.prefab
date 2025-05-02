@@ -104,6 +104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recallSpeed: 50
+  miniLight: {fileID: 3716988669333568587, guid: 024782e62b7389b409773ec7ee6adc72, type: 3}
   nonBouncyMaterial: {fileID: 13400000, guid: 40a6461bb34ab7b41ba718260663a381, type: 2}
 --- !u!54 &-2808837987466185295
 Rigidbody:
@@ -151,7 +152,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.75
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!96 &6657661789112511677
 TrailRenderer:

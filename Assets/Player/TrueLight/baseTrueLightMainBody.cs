@@ -8,7 +8,6 @@ public class baseTrueLightMainBody : MonoBehaviour
     [Header("TrueLight settings")]
     public float orbitSpeed = 10f;         // Speed of the orbit
     public float projectileForce = 10f;    // Speed of the projectile
-    //public float AtuoRecallTimer = 2.5f;     // Time to auto recall the projectile
 
     [Header("Transform settings")]
     public Transform originLocation;       //attack point and recall point for projectile
@@ -39,20 +38,13 @@ public class baseTrueLightMainBody : MonoBehaviour
             Rigidbody rb = projectile.GetComponent<Rigidbody>();
             rb.AddForce(forwardDir.forward * projectileForce, ForceMode.Impulse);
             SetState(false);
-            //StartCoroutine(AutoRecall());
         }
     }
-    /*IEnumerator AutoRecall()
-    {
-        yield return new WaitForSeconds(AtuoRecallTimer);                   // Wait for the specified time
-        projectile.GetComponent<LightProJ>().StartRecall(this.transform);   // pass player position
-    }*/
+
     public void OnRecall(InputAction.CallbackContext context)
     {
         if (context.performed)
             projectile.GetComponent<LightProJ>().StartRecall(this.transform); // pass player position
-
-        //StopCoroutine(AutoRecall());
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -63,7 +55,6 @@ public class baseTrueLightMainBody : MonoBehaviour
             proj.CompleteRecall();
         }
     }
-
     public void OnRecall() { SetState(true); }
     public void SetState(bool state)
     {
