@@ -3,17 +3,18 @@ using UnityEngine;
 
 public class LightProJ : MonoBehaviour
 {
-
     public float recallSpeed = 5;       // Speed of the recall
     public GameObject miniLight;        // Reference to the mini light prefab
+    public GameObject HitVFX;           // Reference to the mini light prefab
+
     public float AutoRecallTimer = 2.5f;
     public PhysicsMaterial nonBouncyMaterial;
 
     private Transform returnLocation;   // The location to return to
     private bool isRecalling = false;   // Check if the projectile is recalling
     private Rigidbody rb;
-    private int bounceCount = 0;        // Count the number of bounces
-    private int maxBounces = 3;         // Maximum number of bounces
+    //private int bounceCount = 0;        // Count the number of bounces
+    //private int maxBounces = 3;         // Maximum number of bounces
 
     void Awake() { rb = GetComponent<Rigidbody>(); }    // Get the rigidbody component
     private void FixedUpdate()
@@ -38,15 +39,12 @@ public class LightProJ : MonoBehaviour
     public bool IsRecalling() => isRecalling;   // Check if the projectile is recalling 
     void OnCollisionEnter(Collision collision) 
     {
-        bounceCount++;  // Increment the bounce count
-        if (bounceCount >= maxBounces)
-            GetComponent<Collider>().material = nonBouncyMaterial;
-
         // Get the contact point
         Vector3 spawnPoint = collision.contacts[0].point;
 
         // Spawn mini light
         GameObject mini = Instantiate(miniLight, spawnPoint, Quaternion.identity);
+        GameObject VFX = Instantiate(HitVFX, spawnPoint, Quaternion.identity);
 
     }
 }

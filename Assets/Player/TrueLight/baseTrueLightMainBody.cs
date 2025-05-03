@@ -28,7 +28,6 @@ public class baseTrueLightMainBody : MonoBehaviour
         Renderer = GetComponent<Renderer>(); // Get the renderer component
     }
     private void FixedUpdate() { orbit(orbitSpeed); }
-
     public void OnAttack(InputAction.CallbackContext context)
     {
         if (context.performed && CanFire)
@@ -40,7 +39,6 @@ public class baseTrueLightMainBody : MonoBehaviour
             SetState(false);
         }
     }
-
     public void OnRecall(InputAction.CallbackContext context)
     {
         if (context.performed)
@@ -62,9 +60,6 @@ public class baseTrueLightMainBody : MonoBehaviour
         pointLight.SetActive(state);     // Enable the point light object
         CanFire = state;                 // Set the CanFire flag to true to allow firing again
     }
-    void orbit(float speed)
-    {
-        transform.Rotate(speed * Time.deltaTime, 0, speed * Time.deltaTime); // Rotate around the target point
-    }
-
+    // Rotate around the target point}
+    void orbit(float speed) { transform.Rotate(speed * Time.deltaTime, 0, speed * Time.deltaTime)}; 
 }

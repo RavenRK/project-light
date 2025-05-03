@@ -27,17 +27,7 @@ public class MoveObject : BasePowerUser
             }
         }
     }
-
-    public override void OnPowered()
-    {
-        targetPosition = originalPosition + moveOffset;
-        base.isPowered = true;
-    }
-
-    public override void OffPowered()
-    {
-        targetPosition = originalPosition;
-        isPowered = true;
-    }
+    public override void OnPowered()    {targetPosition = originalPosition + moveOffset; base.isPowered = true;}
+    public override void OffPowered()   {targetPosition = originalPosition; isPowered = true;}
 }
 

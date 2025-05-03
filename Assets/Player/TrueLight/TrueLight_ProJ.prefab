@@ -105,6 +105,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recallSpeed: 50
   miniLight: {fileID: 3716988669333568587, guid: 024782e62b7389b409773ec7ee6adc72, type: 3}
+  HitVFX: {fileID: 7641625326890049319, guid: a8d035ffff124c94fa56d6b9f2de0968, type: 3}
+  AutoRecallTimer: 2.5
   nonBouncyMaterial: {fileID: 13400000, guid: 40a6461bb34ab7b41ba718260663a381, type: 2}
 --- !u!54 &-2808837987466185295
 Rigidbody:

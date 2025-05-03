@@ -4,26 +4,9 @@ using UnityEngine;
 public class MiniProJ : MonoBehaviour
 {
     public float fadeDuration = 2.5f;
-    public float randomForce = 3f;
-
     private Light pointLight;
-    private Rigidbody rb;
-
-    private void Awake()
-    {
-        rb = GetComponent<Rigidbody>();
-        pointLight = GetComponentInChildren<Light>();
-
-
-        if (pointLight == null)
-            Debug.LogError("MiniProJ: Point light not found!");
-    }
-
-    void Start()
-    {
-        rb.AddForce(Random.onUnitSphere * randomForce, ForceMode.Impulse);
-        StartCoroutine(FadeLight());
-    }
+    private void Awake() { pointLight = GetComponentInChildren<Light>(); }
+    void Start() { StartCoroutine(FadeLight()); }
     private IEnumerator FadeLight()
     {
         float startIntensity = pointLight.intensity;
@@ -35,7 +18,6 @@ public class MiniProJ : MonoBehaviour
             timer += Time.deltaTime;
             yield return null;
         }
-
         pointLight.intensity = 0f;
         Destroy(gameObject);
     }
