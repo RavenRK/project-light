@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d84d24a7f16712b4a9d2761f08e569ec, type: 3}
+  m_Name: Act_3
+  m_EditorClassIdentifier: 
+  lines:
+  - speakerName: NPC1
+    text: "\u201CThis... this can\u2019t be right.\u201D\n\n[stops in their tracks,
+      looking around slowly.]"
+  - speakerName: NPC1
+    text: "\u201CNo, no, no... What happened to everyone? Where are the others? Why...
+      why are they like this?\u201D\n\n[Looks back at the player, eyes wide, confusion
+      mixing with growing fear.]\n\n"
+  - speakerName: NPC1
+    text: "\u201CWas this what happened to me too? I\u2014I didn\u2019t see the light
+      for long enough... was I... was I turned to stone too?\u201D\n\n[Takes a few
+      shaky steps toward the center of the village, looking even more distressed.]\n\n\n"
+  - speakerName: NPC1
+    text: "\u201CWe have to fix this. We need to get the village\u2019s light back
+      on, or... or I don\u2019t know what will happen. If this stone curse spreads,
+      if it\u2019s not already too late...\u201D\n\n[Looks at the player with determination.]\n\n\n"
+  - speakerName: NPC1
+    text: "\u201CThere\u2019s a mechanism in the center of the village, beneath the
+      old tree \u2014 the Sun Tree, we used to call it. It should be connected to
+      the village\u2019s power source. to relight the village\"\n\n"
