@@ -61,5 +61,6 @@ public class baseTrueLightMainBody : MonoBehaviour
         CanFire = state;                 // Set the CanFire flag to true to allow firing again
     }
     // Rotate around the target point}
-    void orbit(float speed) { transform.Rotate(speed * Time.deltaTime, 0, speed * Time.deltaTime)}; 
+    void orbit(float speed)
+    {transform.Rotate(speed * Time.deltaTime, 0, speed * Time.deltaTime);} 
 }
