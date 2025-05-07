@@ -8,11 +8,14 @@ public class movementPlayer : MonoBehaviour
     public float WalkSpeed = 6f;
     public float jumpForce = 5f;                                                                    // Jump force for the player
     public float gravity = -9.81f;                                                                  // Gravity force for the player
-    
+    public bool isMoving = true;
+
     private float moveSpeed = 6;
     private Vector2 moveInput;
     private Rigidbody rb;
     public Transform playerCamera;
+    private Vector3 tempForce;
+
 
     [Header("Ground Check Settings")]
     bool isGrounded = true;                                                                          // Check if the player is on the ground
@@ -33,9 +36,13 @@ public class movementPlayer : MonoBehaviour
         right.Normalize();
 
         Vector3 moveDirection = forward * moveInput.y + right * moveInput.x;                         // Calculate the movement direction based on input
-        Vector3 moveVelocity = moveDirection * moveSpeed;
+        
+        if (isMoving)
+        {
+            Vector3 moveVelocity = moveDirection * moveSpeed;
+            rb.linearVelocity = new Vector3(moveVelocity.x, rb.linearVelocity.y, moveVelocity.z) + tempForce;        // Apply the movement velocity to the rigidbody ( physics base movement)
+        }
 
-        rb.linearVelocity = new Vector3(moveVelocity.x, rb.linearVelocity.y, moveVelocity.z);        // Apply the movement velocity to the rigidbody ( physics base movement)
         rb.AddForce(Vector3.up * gravity, ForceMode.Acceleration);                                   // Apply gravity to the rigidbody
     }
     // Get the input value from the input system
@@ -55,5 +62,10 @@ public class movementPlayer : MonoBehaviour
             if (isGrounded)                                                                           // Check if the player is on the ground
                 rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);                              // Apply the jump force to the rigidbody
         }
+    }
+
+    public void UpdateIsMoving(Vector3 newForce)
+    {
+        tempForce = newForce;
     }
 }
