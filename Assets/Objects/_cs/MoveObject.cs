@@ -17,18 +17,18 @@ public class MoveObject : BasePowerUser
 
     void Update()
     {
-        if (base.isPowered)
+        if (base.PoweredObj == base.powerNeeded)
         {
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
             if (Vector3.Distance(transform.position, targetPosition) < 0.01f)
             {
                 transform.position = targetPosition;
-                isPowered = false;
+                base.PoweredObj = 0;
             }
         }
     }
-    public override void OnPowered() { targetPosition = originalPosition + moveOffset; base.isPowered = true; }
-    public override void OffPowered() { targetPosition = originalPosition; isPowered = true; }
+    public override void OnPowered() { targetPosition = originalPosition + moveOffset; base.PoweredObj += 1; }
+    public override void OffPowered() { targetPosition = originalPosition; PoweredObj = 0; }
 
     void OnTriggerEnter(Collider collision)
     {

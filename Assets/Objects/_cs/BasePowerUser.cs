@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class BasePowerUser : MonoBehaviour
 {
-    public bool isPowered = false;
+    protected int PoweredObj = 0;
+    public int powerNeeded = 1;
     void Start() { }
     void Update() { }
     public virtual void OnPowered() { Debug.Log("Power is activated"); }

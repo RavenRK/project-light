@@ -22,7 +22,6 @@ public class basePower : MonoBehaviour
                 if (powerUser != null)
                 {
                     powerUser.OnPowered();
-                    powerUser.isPowered = true;
                 }
             }
             var mats = GetComponent<MeshRenderer>().materials;
@@ -49,7 +48,6 @@ public class basePower : MonoBehaviour
             if (powerUser != null)
             {
                 powerUser.OffPowered();
-                powerUser.isPowered = true;
             }
         }
         var mats = GetComponent<MeshRenderer>().materials;
