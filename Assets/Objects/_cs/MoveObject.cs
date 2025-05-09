@@ -9,6 +9,7 @@ public class MoveObject : BasePowerUser
     public float moveSpeed = 2f;
     public Vector3 targetPosition;
     public GameObject Player;
+    public bool moveback = true;
 
     private Vector3 originalPosition;
     private Rigidbody rb;
@@ -25,7 +26,7 @@ public class MoveObject : BasePowerUser
         {
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
         }
-        else if (originalPosition != transform.position && PoweredObj != powerNeeded)
+        else if (originalPosition != transform.position && PoweredObj != powerNeeded && moveback == true)
         {
             transform.position = Vector3.MoveTowards(transform.position, originalPosition, moveSpeed * Time.deltaTime);
         }

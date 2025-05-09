@@ -178,4 +178,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isStone: 0
-  dialogueToPlay: {fileID: 11400000, guid: e8be770d24d69b4459f28c60c13c6443, type: 2}
+  dialogueToPlay: {fileID: 11400000, guid: e4ce7b7d25bc0d24e80b90465f85324e, type: 2}
