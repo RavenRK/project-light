@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -2808837987466185295}
   - component: {fileID: 661553196255813330}
   - component: {fileID: 6657661789112511677}
+  - component: {fileID: 2804326825546291175}
   m_Layer: 0
   m_Name: TrueLight_ProJ
   m_TagString: lightProJ
@@ -273,6 +274,20 @@ TrailRenderer:
   m_Autodestruct: 1
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &2804326825546291175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983658673532942143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 572b35cf757e7734e96096eb53293e60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curveStrength: 250
+  maxSpeed: 15
 --- !u!1 &9199001836703108190
 GameObject:
   m_ObjectHideFlags: 0
