@@ -29,7 +29,7 @@ public class LightProJ : MonoBehaviour
         isRecalling = true;                 // Set the recalling flag to true
 
         rb.isKinematic = true;              // Disable physics
-        rb.linearVelocity = Vector3.zero;   // Stop the projectile
+        //rb.linearVelocity = Vector3.zero;   // Stop the projectile
     }
     public void CompleteRecall()
     {

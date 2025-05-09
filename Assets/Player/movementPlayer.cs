@@ -20,8 +20,8 @@ public class movementPlayer : MonoBehaviour
     [Header("Ground Check Settings")]
     bool isGrounded = true;                                                                          // Check if the player is on the ground
     public float groundCheckDis = 1.1f;
-    public LayerMask groundLayer;                                                                   // layer mask for the ground
-    public Transform groundCheckOrigin;                                                             // groudn start point
+    public LayerMask groundLayer;                                                                    // layer mask for the ground
+    public Transform groundCheckOrigin;                                                              // groudn start point
 
     private void Awake() { rb = GetComponent<Rigidbody>(); }
     void FixedUpdate()
@@ -59,11 +59,10 @@ public class movementPlayer : MonoBehaviour
         if (context.performed)
         {
             isGrounded = Physics.Raycast(groundCheckOrigin.position, Vector3.down, groundCheckDis, groundLayer); // Check if the player is on the ground using a raycast
-            if (isGrounded)                                                                           // Check if the player is on the ground
-                rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);                              // Apply the jump force to the rigidbody
+            if (isGrounded)                                                                                      // Check if the player is on the ground
+                rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);                                          // Apply the jump force to the rigidbody
         }
     }
-
     public void UpdateIsMoving(Vector3 newForce)
     {
         tempForce = newForce;

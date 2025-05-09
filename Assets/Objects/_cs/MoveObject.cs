@@ -21,7 +21,7 @@ public class MoveObject : BasePowerUser
 
     void Update()
     {
-        if (PoweredObj == powerNeeded)
+        if (PoweredObj >= powerNeeded)
         {
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
         }

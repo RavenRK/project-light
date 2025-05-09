@@ -11,13 +11,11 @@ public class diealogueManger : MonoBehaviour
 
     private DialogueData currentDialogue;
     private int dialogueIndex = 0;
-    private bool isActive = false;
 
     public void StartDialogue(DialogueData data)
     {
         currentDialogue = data;
         dialogueIndex = 0;
-        isActive = true;
         dialogueUI.SetActive(true);
         ShowNextLine();
     }
@@ -46,7 +44,6 @@ public class diealogueManger : MonoBehaviour
 
     public void EndDialogue()
     {
-        isActive = false;
         dialogueUI.SetActive(false);
     }
 }

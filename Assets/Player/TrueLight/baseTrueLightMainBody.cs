@@ -41,13 +41,13 @@ public class baseTrueLightMainBody : MonoBehaviour
     }
     public void OnRecall(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.performed && projectile != null)
             projectile.GetComponent<LightProJ>().StartRecall(this.transform); // pass player position
     }
     private void OnTriggerEnter(Collider other)
     {
         LightProJ proj = other.GetComponent<LightProJ>();
-        if (proj.IsRecalling())
+        if (proj.IsRecalling() && proj != null)
         {
             SetState(true);               // Enable the TrueLight when the projectile is recalled
             proj.CompleteRecall();
