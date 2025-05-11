@@ -1,6 +1,3 @@
-using NUnit.Framework.Constraints;
-using TMPro;
-using UnityEditor.Rendering;
 using UnityEngine;
 
 public class MoveObject : BasePowerUser
@@ -17,23 +14,16 @@ public class MoveObject : BasePowerUser
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        originalPosition = transform.position;
+        originalPosition = transform.position;  //get original position of the object
     }
-
     void Update()
     {
-        if (PoweredObj >= powerNeeded)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
-        }
-        else if (originalPosition != transform.position && PoweredObj != powerNeeded && moveback == true)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, originalPosition, moveSpeed * Time.deltaTime);
-        }
-
+        if (PoweredObj >= powerNeeded) //if the object is powered
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime); //move to target position
+        else if (originalPosition != transform.position && PoweredObj != powerNeeded && moveback == true) //check if the object is at original position check if the object is not powered and if can move back
+            transform.position = Vector3.MoveTowards(transform.position, originalPosition, moveSpeed * Time.deltaTime); //move back to original position
     }
-
-    public override void OnPowered() {PoweredObj += 1; }
-    public override void OffPowered() {PoweredObj -= 1; }
+    public override void OnPowered() {PoweredObj += 1; }    //add 1 to the powered objects on power on
+    public override void OffPowered() {PoweredObj -= 1; }   //remove 1 from the powered object on power off
 }
 

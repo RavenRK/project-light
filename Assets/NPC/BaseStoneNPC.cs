@@ -14,9 +14,7 @@ public class BaseStoneNPC : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("lightProJ"))
-        {
             isStone = false;
-        }
         if (other.CompareTag("Player") && !hasPlayed)
         {
             dialogueManager.StartDialogue(dialogueToPlay);

@@ -19,6 +19,7 @@ public class ProJControler : MonoBehaviour
     {
         if (Mouse.current.leftButton.isPressed)
         {
+            //gide the object with the camera normal
             Vector3 camForward = mainCamera.transform.forward;
             rb.AddForce(camForward.normalized * curveStrength, ForceMode.Acceleration);
 

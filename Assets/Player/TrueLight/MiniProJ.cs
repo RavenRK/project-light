@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class MiniProJ : MonoBehaviour
 {
+    //     on start, the light will fade out over a set duration
     public float fadeDuration = 2.5f;
     private Light pointLight;
     private void Awake() { pointLight = GetComponentInChildren<Light>(); }

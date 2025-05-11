@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class BasePowerUser : MonoBehaviour
 {
+    //base class for all power users with overrloadable methods for power on and off
     protected int PoweredObj = 0;
     public int powerNeeded = 1;
     void Start() { }

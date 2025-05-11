@@ -22,18 +22,12 @@ public class diealogueManger : MonoBehaviour
     public void OnNextMsg(InputAction.CallbackContext context)
     {
         if (context.performed)
-        {
-            Debug.Log("OnNextMsg");
             ShowNextLine();
-        }
     }
     public void ShowNextLine()
     {
         if (dialogueIndex >= currentDialogue.lines.Length)
-        {
-            EndDialogue();
-            return;
-        }
+        {EndDialogue();return;}
 
         DialogueLine line = currentDialogue.lines[dialogueIndex];
         nameText.text = line.speakerName;

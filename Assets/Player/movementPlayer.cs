@@ -5,23 +5,24 @@ public class movementPlayer : MonoBehaviour
 {
     [Header("Player settings")]
     public float RunSpeed = 12f;
-    public float WalkSpeed = 6f;
-    public float jumpForce = 5f;                                                                    // Jump force for the player
-    public float gravity = -9.81f;                                                                  // Gravity force for the player
+    public float WalkSpeed = 6f;       
+    public float jumpForce = 5f;        
+    public float gravity = -9.81f;      
     public bool isMoving = true;
+
+    public Transform playerCamera;
 
     private float moveSpeed = 6;
     private Vector2 moveInput;
     private Rigidbody rb;
-    public Transform playerCamera;
     private Vector3 tempForce;
 
 
     [Header("Ground Check Settings")]
-    bool isGrounded = true;                                                                          // Check if the player is on the ground
+    bool isGrounded = true;         
     public float groundCheckDis = 1.1f;
-    public LayerMask groundLayer;                                                                    // layer mask for the ground
-    public Transform groundCheckOrigin;                                                              // groudn start point
+    public LayerMask groundLayer; 
+    public Transform groundCheckOrigin; 
 
     private void Awake() { rb = GetComponent<Rigidbody>(); }
     void FixedUpdate()
@@ -63,8 +64,5 @@ public class movementPlayer : MonoBehaviour
                 rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);                                          // Apply the jump force to the rigidbody
         }
     }
-    public void UpdateIsMoving(Vector3 newForce)
-    {
-        tempForce = newForce;
-    }
+    public void UpdateIsMoving(Vector3 newForce) { tempForce = newForce; }
 }

@@ -4,11 +4,12 @@ using UnityEngine.Experimental.GlobalIllumination;
 
 public class BaseLight : BasePowerUser
 {
+    //when power is on the lgith wil be tern on forever..
+    private MeshRenderer meshRenderer;
     private Light lightSource;
     [Header("mat settings ")]
     public Material poweredMaterial;
     public Material unpoweredMaterial;
-    private MeshRenderer meshRenderer;
 
     private void Start()
     {

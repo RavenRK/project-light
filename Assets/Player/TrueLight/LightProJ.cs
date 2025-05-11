@@ -13,23 +13,19 @@ public class LightProJ : MonoBehaviour
     private Transform returnLocation;   // The location to return to
     private bool isRecalling = false;   // Check if the projectile is recalling
     private Rigidbody rb;
-    //private int bounceCount = 0;        // Count the number of bounces
-    //private int maxBounces = 3;         // Maximum number of bounces
 
     void Awake() { rb = GetComponent<Rigidbody>(); }    // Get the rigidbody component
     private void FixedUpdate()
     {
-        if (isRecalling)
-            transform.position = Vector3.MoveTowards(transform.position, returnLocation.position, recallSpeed * Time.deltaTime); // Move towards the return location (player)
+        if (isRecalling)    // Move towards the return location (player)
+            transform.position = Vector3.MoveTowards(transform.position, returnLocation.position, recallSpeed * Time.deltaTime); 
     }
 
     public void StartRecall(Transform target)
     {
         returnLocation = target;            // Set the return location to the target
         isRecalling = true;                 // Set the recalling flag to true
-
         rb.isKinematic = true;              // Disable physics
-        //rb.linearVelocity = Vector3.zero;   // Stop the projectile
     }
     public void CompleteRecall()
     {
@@ -42,7 +38,7 @@ public class LightProJ : MonoBehaviour
         // Get the contact point
         Vector3 spawnPoint = collision.contacts[0].point;
 
-        // Spawn mini light
+        // Spawn mini light and VFX at the contact point
         GameObject mini = Instantiate(miniLight, spawnPoint, Quaternion.identity);
         GameObject VFX = Instantiate(HitVFX, spawnPoint, Quaternion.identity);
 
